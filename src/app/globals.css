@@ -10,6 +10,20 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --color-beige: #F5F5DC;
+  --color-bisque: #FFE4C4;
+  --color-blanchedalmond: #FFEBCD;
+  --color-burlywood: #DEB887;
+  --color-saddlebrown: #8B4513;
+  --color-wheat: #F5DEB3;
+  --color-tan: #D2B48C;
+  --color-sienna: #A0522D;
+  --color-papayawhip: #FFEFD5;
+  --color-moccasin: #FFE4B5;
+  --color-oldlace: #FDF5E6;
+  --color-linen: #FAF0E6;
+  --color-antiquewhite: #FAEBD7;
 }
 
 @media (prefers-color-scheme: dark) {
