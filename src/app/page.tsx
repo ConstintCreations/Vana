@@ -1,4 +1,6 @@
 import SectionButton from "./components/sectionButton";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalendarCheck } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   return (
@@ -6,9 +8,7 @@ export default function Home() {
         <div className="bg-bisque border-15 border-burlywood w-[80vw] h-[85vh] rounded-[30px] flex flex-row">
           <div className="page-left page flex flex-col">
             <div className="flex flex-row-reverse py-[4px] px-5 gap-5">
-              <SectionButton />
-              <SectionButton />
-              <SectionButton />
+              <SectionButton icon={faCalendarCheck} />
             </div>
           </div>
           <div className="bg-burlywood w-[8%] h-full"></div>
