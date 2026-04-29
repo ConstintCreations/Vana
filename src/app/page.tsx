@@ -28,9 +28,9 @@ export default function Home() {
           <div className="bg-burlywood w-[8%] h-full"></div>
           <div className="page-right page">
             <div className="flex flex-col h-[75vh] top-[12.5vh] fixed left-[calc(90vw-15px)] gap-[2vh] w-[4vw] justify-around align-end">
-              <TabButton text="Summary"></TabButton>
-              <TabButton text="Options"></TabButton>
-              <TabButton text="Help"></TabButton>
+              <TabButton text="Summary" selected={true} ></TabButton>
+              <TabButton text="Options" selected={false}></TabButton>
+              <TabButton text="Help" selected={false}></TabButton>
             </div>
           </div>
         </div>
