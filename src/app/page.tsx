@@ -1,4 +1,5 @@
 import SectionButton from "./components/sectionButton";
+import TabButton from "./components/tabButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarCheck, faClipboardList, faShop } from "@fortawesome/free-solid-svg-icons";
 
@@ -27,15 +28,9 @@ export default function Home() {
           <div className="bg-burlywood w-[8%] h-full"></div>
           <div className="page-right page">
             <div className="flex flex-col h-[75vh] top-[12.5vh] fixed left-[calc(90vw-15px)] gap-[2vh] w-[4vw] justify-around align-end">
-              <div className="cursor-pointer w-full h-[30%] bg-bisque rounded-tr-[30px] rounded-br-[30px] border-burlywood border-r-15 border-t-15 border-b-15 flex justify-center items-center flex-nowrap">
-                <p className="rotate-90 text-nowrap text-burlywood font-bold text-2xl">Summary</p>
-              </div>
-              <div className="cursor-pointer w-full h-[30%] bg-wheat rounded-tr-[30px] rounded-br-[30px] border-burlywood border-r-15 border-t-15 border-b-15 flex justify-center items-center">
-                <p className="rotate-90 text-nowrap text-burlywood font-bold text-2xl">Options</p>
-              </div>
-              <div className="cursor-pointer w-full h-[30%] bg-wheat rounded-tr-[30px] rounded-br-[30px] border-burlywood border-r-15 border-t-15 border-b-15 flex justify-center items-center">
-                <p className="rotate-90 text-nowrap text-burlywood font-bold text-2xl">Help</p>
-              </div>
+              <TabButton text="Summary"></TabButton>
+              <TabButton text="Options"></TabButton>
+              <TabButton text="Help"></TabButton>
             </div>
           </div>
         </div>
