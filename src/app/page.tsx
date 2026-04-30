@@ -19,11 +19,11 @@ export default function Home() {
               </h1>
               <div className="flex flex-row gap-5">
                 <div className="flex flex-row gap-5">
-                  <SectionButton icon={faCalendarCheck} onClick={() => setSection("Daily")} selected={section == "Daily"} /> {/*Daily*/}
-                  <SectionButton icon={faClipboardList} onClick={() => setSection("Summary")} selected={section == "Summary"} /> {/*Summary*/}
+                  <SectionButton icon={faCalendarCheck} onClick={() => {setSection("Daily"); setTab("Main")}} selected={section == "Daily"} /> {/*Daily*/}
+                  <SectionButton icon={faClipboardList} onClick={() => {setSection("Summary"); setTab("Main")}} selected={section == "Summary"} /> {/*Summary*/}
                 </div>
                 <div className="w-[1px] outline-4 outline-saddlebrown h-full bg-saddlebrown rounded-b-full"></div>
-                <SectionButton icon={faShop} onClick={() => setSection("Shop")} selected={section == "Shop"} /> {/*Shop*/}
+                <SectionButton icon={faShop} onClick={() => {setSection("Shop"); setTab("Main")}} selected={section == "Shop"} /> {/*Shop*/}
               </div>
             </div>
             <div className="h-[6px] mt-3 w-full bg-saddlebrown">
