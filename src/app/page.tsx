@@ -1,7 +1,6 @@
 "use client";
 import SectionButton from "./components/sectionButton";
 import TabButton from "./components/tabButton";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarCheck, faClipboardList, faShop } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
@@ -19,11 +18,11 @@ export default function Home() {
               </h1>
               <div className="flex flex-row gap-5">
                 <div className="flex flex-row gap-5">
-                  <SectionButton icon={faCalendarCheck} onClick={() => setSection("Daily")} /> {/*Daily*/}
-                  <SectionButton icon={faClipboardList} onClick={() => setSection("Summary")} /> {/*Summary*/}
+                  <SectionButton icon={faCalendarCheck} onClick={() => setSection("Daily")} selected={section == "Daily"} /> {/*Daily*/}
+                  <SectionButton icon={faClipboardList} onClick={() => setSection("Summary")} selected={section == "Summary"} /> {/*Summary*/}
                 </div>
                 <div className="w-[1px] outline-4 outline-saddlebrown h-full bg-saddlebrown rounded-b-full"></div>
-                <SectionButton icon={faShop} onClick={() => setSection("Shop")} /> {/*Shop*/}
+                <SectionButton icon={faShop} onClick={() => setSection("Shop")} selected={section == "Shop"} /> {/*Shop*/}
               </div>
             </div>
             <div className="h-[6px] mt-3 w-full bg-saddlebrown">
@@ -33,7 +32,7 @@ export default function Home() {
           <div className="bg-burlywood w-[8%] h-full"></div>
           <div className="page-right page">
             <div className="flex flex-col h-[75vh] top-[12.5vh] fixed left-[calc(90vw-15px)] gap-[2vh] w-[4vw] justify-around align-end">
-              <TabButton text="Summary" selected={true} ></TabButton>
+              <TabButton text={section} selected={true} ></TabButton>
               <TabButton text="Options" selected={false}></TabButton>
               <TabButton text="Help" selected={false}></TabButton>
             </div>
