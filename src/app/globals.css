@@ -50,3 +50,22 @@ body {
     @apply h-full w-full;
   }
 }
+
+.tabButton {
+  transition: opacity 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.tabButton.main {
+  opacity: 0;
+  filter:blur(10px);
+}
+
+.tabButton.options, .tabButton.help {
+  opacity: 1;
+  filter:blur(0px);
+}
+
+.tabButton.transition {
+  transition: none;
+  filter: blur(10px);
+}
