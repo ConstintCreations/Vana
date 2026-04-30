@@ -7,6 +7,7 @@ import { useState } from "react";
 export default function Home() {
 
   const [section, setSection] = useState<"Daily" | "Summary" | "Shop">("Daily");
+  const [tab, setTab] = useState<"Main" | "Options" | "Help">("Main");
 
   return (
       <main className="fixed w-full h-full overflow-hidden grid place-items-center bg-wheat">
@@ -32,9 +33,9 @@ export default function Home() {
           <div className="bg-burlywood w-[8%] h-full"></div>
           <div className="page-right page">
             <div className="flex flex-col h-[75vh] top-[12.5vh] fixed left-[calc(90vw-15px)] gap-[2vh] w-[4vw] justify-around align-end">
-              <TabButton text={section} selected={true} ></TabButton>
-              <TabButton text="Options" selected={false}></TabButton>
-              <TabButton text="Help" selected={false}></TabButton>
+              <TabButton text={section} onClick={() => {setTab("Main")}} selected={tab == "Main"} ></TabButton>
+              <TabButton text="Options" onClick={() => {setTab("Options")}} selected={tab == "Options"}></TabButton>
+              <TabButton text="Help" onClick={() => {setTab("Help")}} selected={tab == "Help"}></TabButton>
             </div>
           </div>
         </div>
