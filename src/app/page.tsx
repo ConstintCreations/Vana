@@ -14,8 +14,10 @@ export default function Home() {
         <div className="bg-bisque border-15 border-burlywood w-[80vw] h-[85vh] rounded-[30px] flex flex-row">
           <div className="page-left page flex flex-col">
             <div className="flex flex-row justify-between py-[4px] px-5 gap-5">
-              <h1 className="font-bold text-saddlebrown mt-5 text-4xl flex-1 flex justify-center">
-                {section}
+              <h1 className="font-bold text-saddlebrown items-center h-full text-4xl flex-1 flex justify-center">
+                {tab == "Main" ? section : <div className="flex flex-col-reverse">
+                  {section}<span className="text-lg text-burlywood">{tab}</span>
+                </div>}
               </h1>
               <div className="flex flex-row gap-5">
                 <div className="flex flex-row gap-5">
