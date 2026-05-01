@@ -1,6 +1,7 @@
 "use client";
 import SectionButton from "./components/sectionButton";
 import TabButton from "./components/tabButton";
+import SummaryPage from "./components/summaryPage";
 import { faCalendarCheck, faClipboardList, faShop } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
@@ -39,8 +40,9 @@ export default function Home() {
                 <SectionButton icon={faShop} onClick={() => {setSection("Shop"); setTab("Main")}} selected={section == "Shop"} /> {/*Shop*/}
               </div>
             </div>
-            <div className="h-[6px] mt-3 w-full bg-saddlebrown">
-              
+            <div className="h-[6px] mt-3 w-full bg-saddlebrown"></div>
+            <div className="w-full h-full left-page-content text-saddlebrown">
+              { section == "Summary" && tab == "Main" ? <SummaryPage></SummaryPage> : "" }
             </div>
           </div>
           <div className="bg-burlywood w-[8%] h-full"></div>
