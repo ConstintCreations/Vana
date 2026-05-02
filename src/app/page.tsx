@@ -1,7 +1,7 @@
 "use client";
 import SectionButton from "./components/sectionButton";
 import TabButton from "./components/tabButton";
-import SummaryPage from "./components/summaryPage";
+import SummaryPage from "./components/pages/left/summary/summaryPage";
 import { faCalendarCheck, faClipboardList, faShop } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
