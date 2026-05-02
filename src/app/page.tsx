@@ -1,7 +1,15 @@
 "use client";
 import SectionButton from "./components/sectionButton";
 import TabButton from "./components/tabButton";
+import DailyPage from "./components/pages/left/daily/dailyPage";
+import DailyOptionsPage from "./components/pages/left/daily/dailyOptionsPage";
+import DailyHelpPage from "./components/pages/left/daily/dailyHelpPage";
 import SummaryPage from "./components/pages/left/summary/summaryPage";
+import SummaryOptionsPage from "./components/pages/left/summary/summaryOptionsPage";
+import SummaryHelpPage from "./components/pages/left/summary/summaryHelpPage";
+import ShopPage from "./components/pages/left/shop/shopPage";
+import ShopOptionsPage from "./components/pages/left/shop/shopOptionsPage";
+import ShopHelpPage from "./components/pages/left/shop/shopHelpPage";
 import { faCalendarCheck, faClipboardList, faShop } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
@@ -42,7 +50,18 @@ export default function Home() {
             </div>
             <div className="h-[6px] mt-3 w-full bg-saddlebrown"></div>
             <div className="w-full h-full left-page-content text-saddlebrown">
-              { section == "Summary" && tab == "Main" ? <SummaryPage></SummaryPage> : "" }
+              { section == "Daily" && tab == "Main" ? <DailyPage></DailyPage> :
+                section == "Daily" && tab == "Options" ? <DailyOptionsPage></DailyOptionsPage> :
+                section == "Daily" && tab == "Help" ? <DailyHelpPage></DailyHelpPage> :
+              
+                section == "Summary" && tab == "Main" ? <SummaryPage></SummaryPage> : 
+                section == "Summary" && tab == "Options" ? <SummaryOptionsPage></SummaryOptionsPage> :
+                section == "Summary" && tab == "Help" ? <SummaryHelpPage></SummaryHelpPage> : 
+
+                section == "Summary" && tab == "Main" ? <ShopPage></ShopPage> : 
+                section == "Summary" && tab == "Options" ? <ShopOptionsPage></ShopOptionsPage> :
+                section == "Summary" && tab == "Help" ? <ShopHelpPage></ShopHelpPage> : ""
+              }
             </div>
           </div>
           <div className="bg-burlywood w-[8%] h-full"></div>
