@@ -1,6 +1,5 @@
 "use client";
-import SectionButton from "./components/sectionButton";
-import TabButton from "./components/tabButton";
+
 import DailyPage from "./components/pages/left/daily/dailyPage";
 import DailyOptionsPage from "./components/pages/left/daily/dailyOptionsPage";
 import DailyHelpPage from "./components/pages/left/daily/dailyHelpPage";
@@ -10,6 +9,19 @@ import SummaryHelpPage from "./components/pages/left/summary/summaryHelpPage";
 import ShopPage from "./components/pages/left/shop/shopPage";
 import ShopOptionsPage from "./components/pages/left/shop/shopOptionsPage";
 import ShopHelpPage from "./components/pages/left/shop/shopHelpPage";
+
+import DailyPageRight from "./components/pages/right/daily/dailyPageRight";
+import DailyOptionsPageRight from "./components/pages/right/daily/dailyOptionsPageRight";
+import DailyHelpPageRight from "./components/pages/right/daily/dailyHelpPageRight";
+import SummaryPageRight from "./components/pages/right/summary/summaryPageRight";
+import SummaryOptionsPageRight from "./components/pages/right/summary/summaryOptionsPageRight";
+import SummaryHelpPageRight from "./components/pages/right/summary/summaryHelpPageRight";
+import ShopPageRight from "./components/pages/right/shop/shopPageRight";
+import ShopOptionsPageRight from "./components/pages/right/shop/shopOptionsPageRight";
+import ShopHelpPageRight from "./components/pages/right/shop/shopHelpPageRight";
+
+import SectionButton from "./components/sectionButton";
+import TabButton from "./components/tabButton";
 import { faCalendarCheck, faClipboardList, faShop } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
@@ -66,6 +78,18 @@ export default function Home() {
           </div>
           <div className="bg-burlywood w-[8%] h-full"></div>
           <div className="page-right page">
+            { section == "Daily" && tab == "Main" ? <DailyPageRight></DailyPageRight> :
+              section == "Daily" && tab == "Options" ? <DailyOptionsPageRight></DailyOptionsPageRight> :
+              section == "Daily" && tab == "Help" ? <DailyHelpPageRight></DailyHelpPageRight> :
+            
+              section == "Summary" && tab == "Main" ? <SummaryPageRight></SummaryPageRight> : 
+              section == "Summary" && tab == "Options" ? <SummaryOptionsPageRight></SummaryOptionsPageRight> :
+              section == "Summary" && tab == "Help" ? <SummaryHelpPageRight></SummaryHelpPageRight> : 
+
+              section == "Summary" && tab == "Main" ? <ShopPageRight></ShopPageRight> : 
+              section == "Summary" && tab == "Options" ? <ShopOptionsPageRight></ShopOptionsPageRight> :
+              section == "Summary" && tab == "Help" ? <ShopHelpPageRight></ShopHelpPageRight> : ""
+            }
             <div className="flex flex-col h-[75vh] top-[12.5vh] fixed left-[calc(90vw-15px)] gap-[2vh] w-[4vw] justify-around align-end">
               <TabButton text={section} onClick={() => {tabChange("Main")}} selected={tab == "Main"} ></TabButton>
               <TabButton text="Options" onClick={() => {tabChange("Options")}} selected={tab == "Options"}></TabButton>
